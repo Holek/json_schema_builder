@@ -11,9 +11,9 @@ Gem::Specification.new do |s|
   s.summary     = %q{A good API needs JSON Schema description! Get it right and build JSON Schemata for your ActiveRecord models}
   s.description = %q{The first step to a clean and simple API is a unified API description in form of a shared JSON Schema}
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = ['.gitignore', '.rspec', '.travis.yml', 'Gemfile', 'README.rdoc', 'Rakefile', 'bin/schema', 'json_schema_builder.gemspec', 'lib/json_schema_builder.rb', 'lib/schema_builder.rb', 'lib/schema_builder/railtie.rb', 'lib/schema_builder/tasks.rb', 'lib/schema_builder/version.rb', 'lib/schema_builder/writer.rb', 'spec/fixtures/ar_schema.rb', 'spec/fixtures/user.rb', 'spec/schema_builder/writer_spec.rb', 'spec/spec_helper.rb']
+  s.test_files    = ['spec/fixtures/ar_schema.rb', 'spec/fixtures/user.rb', 'spec/schema_builder/writer_spec.rb', 'spec/spec_helper.rb']
+  s.executables   = ['schema']
   s.require_paths = ["lib"]
 
   s.add_dependency 'json'
